@@ -17,6 +17,8 @@ public enum CucumberTestContext {
   private static final String PAYLOAD = "PAYLOAD";
   private static final String REQUEST = "REQUEST";
   private static final String RESPONSE = "RESPONSE";
+  public static final String ACTUAL_RESULT = "ACTUAL_RESULT";
+  public static final String EXPECTED_RESULT = "EXPECTED_RESULT";
 
   private final ThreadLocal<Map<String, Object>> threadLocal = withInitial(HashMap::new);
 

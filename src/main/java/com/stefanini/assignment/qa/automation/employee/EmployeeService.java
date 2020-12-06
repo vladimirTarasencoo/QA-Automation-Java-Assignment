@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Validated
 public class EmployeeService {
@@ -23,6 +26,15 @@ public class EmployeeService {
     employeeDao.save(employeeEntity);
 
     return employeeEntity.getId();
+  }
+
+  @Transactional
+  @Validated
+  public List<Employee> getEmployees() {
+    List<Employee> result = new ArrayList<>();
+    employeeDao.findAll().forEach(employeeEntity -> result.add(mapper.toEmployee(employeeEntity)));
+
+    return result;
   }
 
 }
