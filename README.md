@@ -28,5 +28,13 @@ Building the project:
 mvn clean install
 ```
 
+Results:
+
+* Added 1 endpoint (GET employees)
+* Additional Test scenario with new endpoint that verifies the presence and structure of recently created employee;
+* 4 new negative test scenarios related to create(POST employees) endpoint;
+* Some small additional verifications regarding POST request;
+* Additional options for existing cucumber steps;
+
 
 
